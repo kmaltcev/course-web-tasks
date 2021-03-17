@@ -1,0 +1,62 @@
+body {
+    background-color: #565656;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: table;
+    margin: 0 auto;
+}
+
+input {
+    outline: 0;
+    border: 0;
+    color: #fff;
+    background: rgba(17, 17, 17, 1);
+    width: 4rem;
+    height: 2rem;
+    float: left;
+    margin: .05rem;
+    font-size: 14px;
+}
+
+input:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 70px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+input:disabled {
+    cursor: unset;
+    color: #6D6D6D;
+    box-shadow: unset;
+    border: unset;
+}
+
+.answer:disabled {
+    width: 100%;
+    font-size: 24px;
+    color: #fff;
+    text-align: right;
+    background-color: #1F1F1F;
+    float: left;
+}
+
+.first > input {
+    background-color: transparent;
+}
+
+.operator {
+    background-color: rgba(17, 17, 17, 0.5);
+}
+
+.equal {
+    background-color: rgba(9, 117, 202, 0.7);
+}
+
+.equal:hover {
+    background-color: rgba(9, 117, 202, 1);
+}
