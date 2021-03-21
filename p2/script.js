@@ -1,5 +1,5 @@
 const buttons = [["MC", "MR", "M+", "M-", "MS"],
-    ["2nd", "𝜋", "e", "C", "⌫"],
+    ["2^nd", "𝜋", "e", "C", "⌫"],
     ["x^2", "1/x", "|x|", "exp", "mod"],
     ["√", "(", ")", "n!", "÷"],
     ["x^y", "7", "8", "9", "×"],
@@ -12,9 +12,18 @@ buttons.forEach(row => {
     let rowDiv = document.createElement("div")
     rowDiv.setAttribute("class", "row")
     row.forEach(button => {
-        let btn = document.createElement("input")
+        let btn = document.createElement("button")
+        let lbl = document.createElement("label")
+        let sup = ""
         btn.setAttribute('type', 'button')
         btn.setAttribute('value', button)
+        if (button.match(/.*\^[\d\w]/)) {
+            sup = document.createElement('sup')
+            sup.innerText = button.split('^')[1]
+        }
+        lbl.innerText = button.split('^')[0]
+        lbl.append(sup)
+        btn.appendChild(lbl)
         if (button.match(/[^0-9.±]/)) {
             btn.setAttribute('class', 'operator')
         }
@@ -32,8 +41,8 @@ firstRow.childNodes.forEach(button => {
     button.setAttribute('class', 'operator memory')
 })
 
-const input = document.getElementsByTagName('input')
-const answer = input[0]
+const input = document.getElementsByTagName('button')
+const answer = document.getElementById('screen')
 
 input[input.length - 1].setAttribute('class', 'equal')
 input[1].disabled = input[2].disabled = input[6].disabled = true
@@ -42,6 +51,7 @@ let x, Memory
 const memButtons = [input[1], input[2]]
 
 function btnHandler(value) {
+    console.log(value)
     switch (value) {
         // ["MC", "MR", "M+", "M-", "MS"]
         case "MC": //Memory Clear
