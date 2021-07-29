@@ -6,6 +6,7 @@ const buttons = [["MC", "MR", "M+", "M-", "MS"],
     ["10^x", "4", "5", "6", "-"],
     ["log", "1", "2", "3", "+"],
     ["ln", "±", "0", ".", "="]]
+
 const btnDiv = document.getElementById("buttons")
 
 buttons.forEach(row => {
@@ -14,20 +15,17 @@ buttons.forEach(row => {
     row.forEach(button => {
         let btn = document.createElement("button")
         let lbl = document.createElement("label")
-        let sup = ""
         btn.setAttribute('type', 'button')
         btn.setAttribute('value', button)
         if (button.match(/.*\^[\d\w]/)) {
-            sup = document.createElement('sup')
+            let sup = document.createElement('sup')
             sup.innerText = button.split('^')[1]
+            lbl.append(sup)
         }
         lbl.innerText = button.split('^')[0]
-        lbl.append(sup)
         btn.appendChild(lbl)
-        if (button.match(/[^0-9.±]/)) {
-            btn.setAttribute('class', 'operator')
-        }
-        btn.onclick = function () {
+        if (button.match(/[^0-9.±]/)) btn.setAttribute('class', 'operator')
+        btn.onclick = function() {
             btnHandler(this.value)
         }
         rowDiv.appendChild(btn)
@@ -37,9 +35,7 @@ buttons.forEach(row => {
 
 const firstRow = document.getElementsByClassName('row')[0]
 firstRow.setAttribute("class", "row first")
-firstRow.childNodes.forEach(button => {
-    button.setAttribute('class', 'operator memory')
-})
+firstRow.childNodes.forEach(button => button.setAttribute('class', 'operator memory'))
 
 const input = document.getElementsByTagName('button')
 const answer = document.getElementById('screen')

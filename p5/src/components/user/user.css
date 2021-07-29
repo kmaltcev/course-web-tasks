@@ -1,0 +1,6 @@
+.usercard {
+    max-width: 80%;
+    max-height: 95%;
+    box-shadow: 0 0 5rem black;
+    border-radius: 10px;
+}

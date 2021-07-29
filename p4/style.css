@@ -1,0 +1,80 @@
+body {
+    background-color: #E6E8E8;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+button {
+    outline: 0;
+    padding: 5px 10px; 
+    border: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: white;
+    font-size: xx-large;
+}
+
+.buttons {
+    padding: 0;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.card {
+    padding: 0;
+    flex-direction: row;
+    border: 3px solid #207DAD;
+    background-color: #30ACEC;
+    height: 300px;
+}
+
+.titles > ul, .data > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: white;
+    width: 100%;
+}
+
+.card > .titles > ul {
+    padding-left: 30px;
+}
+
+li.selected {
+    border: 3px solid #AF396E;
+    background-color: #D64787;
+}
+
+.left > .card {
+    width: 500px;
+}
+
+.right > .card {
+    width: 300px;
+}
+
+.new {
+    background: radial-gradient(#8BC76480, #78B44C);
+}
+
+.save {
+    background: radial-gradient(#4FB3ED80, #32A4E2);
+}
+
+.begin {
+    background: radial-gradient(#AE77E380, #9A5AD5);
+}
+
+.erase {
+    background: radial-gradient(#E4A55880, #D89439);
+}

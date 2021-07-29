@@ -1,0 +1,23 @@
+
+html {
+    font-size: 62.5%;
+}
+
+table {
+    margin: 0 auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    padding: 2px;
+    text-align: center;
+  }
+.up {
+    color: green
+}
+
+.down {
+    color: red
+}

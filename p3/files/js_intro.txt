@@ -1,0 +1,73 @@
+- old web page = html+css
+- 1996: javascript 
+- Microsoft IE <-> other browsers
+- Ecma, EcmaScript - standard
+- ~2002: jQuery
+
+------------------------------------------------------------------------------------------------
+- 2009: NodeJS (Ryan Dail), JS virtual machine (from Chrome) -> script to language ...
+- 2015: ES6
+	- JS - tool extending web page with dynamic features -> the main tool creating web page 
+- 2020: 
+	- web page - frontend (JS)
+	- server - backend (NodeJS) 
+	---------------------------
+	- full stack
+
+	- mobile
+	- desktop
+------------------------------------------------------------------------------------------------
+- environment
+	- dev: text editor, vs code
+	- run and debug: browser (Chrome etc), NodeJS
+------------------------------------------------------------------------------------------------
+- 1.Variables
+	var -> const, let
+- 2.Mutation (conversion)
+	string and num
+	== vs ===
+- 3.Operators
+- 4.Data types (primitives)
+	boolean, string, number, undefined, null
+	number object, parseInt, parseFloat, toFixed(), NaN ..
+		bigint
+		Math (.. random())
+	string
+		`${x}`
+		indexOf(), trim(), length ..
+- 5.Conditional operators
+	if -> ?
+	let y = x ? 1 : 0
+	let y = x ?? 0
+- 6.Functions 
+	function declaration
+	function expression
+	function as object
+	anonymous function (w/o name), ex - setTimeout
+	array functions (es6)
+	default parameters (es6)
+	rest operator // functon f(...all)
+	closure
+- 7.Arrays - definitions
+	new Array(a,b) vs [a,b]
+	push, unshift
+	shift
+	indexOf
+	findIndex, find, filter, map, forEach, reduce
+- 8.Loops
+	for(let i=0;i<cars.length;i++)
+	for(let car of cars)
+- 9.Objects
+	new Object({}) vs {}
+	properties manipulations
+	destructuring 
+	for (let key in obj)
+	Object.keys(o), Object.values(o)
+	context (bind and call for object method)
+	call with params
+- 10.HTML DOM
+	browser API in console
+	selectors
+	HTML content manipulations
+	storage
+	
